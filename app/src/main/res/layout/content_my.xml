@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.c1tech.textfilemanager.MyActivity"
+    tools:showIn="@layout/activity_my"
+    android:weightSum="1">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:id="@+id/irrelevant5"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter new text in the text box below if your action needs it. Hit the load action to load the text file. "
+        android:id="@+id/irrelevant1"
+        android:layout_below="@+id/irrelevant5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Actions:"
+        android:id="@+id/irrelevant2"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Load"
+        android:id="@+id/load"
+        android:onClick="buttonLoad"
+        android:layout_below="@+id/replace"
+        android:layout_alignLeft="@+id/replace"
+        android:layout_alignStart="@+id/replace"
+        android:layout_alignRight="@+id/addToEnd"
+        android:layout_alignEnd="@+id/addToEnd" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Replace File"
+        android:id="@+id/replace"
+        android:onClick="buttonReplace"
+        android:layout_below="@+id/irrelevant2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/irrelevant1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Enter text here......"
+        android:textColorHint="#800007"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Add to End"
+        android:id="@+id/addToEnd"
+        android:layout_below="@+id/load"
+        android:layout_alignRight="@+id/replace"
+        android:layout_alignEnd="@+id/replace"
+        android:onClick="buttonAddToEnd"
+        android:layout_alignLeft="@+id/replace"
+        android:layout_alignStart="@+id/replace" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Anagram"
+        android:id="@+id/anagram"
+        android:layout_below="@+id/addToEnd"
+        android:layout_alignRight="@+id/addToEnd"
+        android:layout_alignEnd="@+id/addToEnd"
+        android:onClick="buttonAnagram"
+        android:layout_alignLeft="@+id/addToEnd"
+        android:layout_alignStart="@+id/addToEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:layout_below="@+id/anagram"
+        android:hint="If no t1.txt exists in the download directory, program will terminate when 'Load' and 'Anagram' buttons are hit. To make a new file in the download directory called t1.txt, hit 'Add to End' to begin adding input to file."
+        android:textColorHint="#800007"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:id="@+id/irrelevant4"
+        android:layout_weight="1"
+        android:layout_below="@+id/textView"/>
+
+        <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y2K a Text Editor is created by Yu Lin. All rights reserved. 2016"
+        android:id="@+id/irrelevant3"
+        android:layout_below="@+id/irrelevant4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"/>
+
+    </RelativeLayout>
+</ScrollView>
